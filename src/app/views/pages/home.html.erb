@@ -1,0 +1,46 @@
+<div class="jumbotron p-4 p-md-5 text-white header-img">
+  <div class="col-md-5 mt-4 ml-2 px-0 text-center">
+    <h1 class="display-3">Welcome to Books Buzza</h1>
+    <p class="lead my-3">Find new homes for your old books</p>
+  </div>
+</div>
+</div>
+<div class="row box">
+  <div class="col-sm-6 tl text-center text-white">
+    <div class="inner-box top-left">
+      <h2 class="display-5">Selling your old books?</h2>
+      <button type="button" class="my-3 btn start"><%= link_to "Start here", new_user_session_path%> </button>
+    </div>
+  </div>
+  <div class="col-sm-6 tr text-center">
+    <div class="inner-box top-right">
+      <h2 class="display-5">Looking for books?</h2>
+      <button type="button" class="my-3 btn search"><%= link_to "Search here", new_user_session_path%></button>
+    </div>
+  </div>
+</div>
+<div class="w-100"></div>
+<div class="row box">
+  <div class="col-sm-6 bl">
+    <div class="inner-box bottom-left">
+      <h2 class="display-5">  <%= image_tag "logo.png"%></h2>
+    </div>
+  </div>
+  <div class="col-sm-6 br text-center text-white">
+    <div class="inner-box bottom-left ">
+      <h2 class="display-5">About Books Buzza</h2>
+      <p>
+        Books Buzza is an online marketplace set up in May 2020 to let you get 
+        rid of your old books and make some cash at the same time. To start browsing or selling, 
+        simply register and use it. If you like our services, please support us by making a donation. 
+      </p>
+      <button data-stripe="donate" type="button" class="my-3 btn donate">Donate $10</button>
+    </div>
+  </div>
+</div>
+<br/>
+<nav class="footer">
+  <div class="container">
+    @Books Buzza 2020
+  </div>
+</nav>

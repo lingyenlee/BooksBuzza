@@ -1,0 +1,32 @@
+<div class="container my-2 search">
+  <!-- Search form -->
+  <%= search_form_for @search do |f| %>
+    <div class=" row search-wrapper">
+      <div class="form-inline d-flex md-form form-lg col-md-8 active-cyan active-cyan-2">
+        <div class="text-center">
+          <%= fa_icon "search" %>
+          <%= f.text_field :title_cont, class: "form-control form-control-lg ml-3", placeholder: "Search by book title" %>
+        </div>
+      </div>
+      <div class="form-inline d-flex col-md-2 offset-md-2 clear-search-btn">
+        <%= link_to "Clear search", listings_path, class:"actions btn"  %>
+      </div>
+    </div>
+    <div class="card-header">
+      Search by category
+    </div>
+    <div class="card-body">
+      <ul class="checkbox">
+        <%= f.collection_check_boxes :categories_id_in_any, Category.all, :id, :name do |b| %>
+          <li><%= b.check_box %><%= b.label%></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center search-btn">
+        <%= f.submit "Search", class:"actions btn"  %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= render "lists",  listings: @listings%>

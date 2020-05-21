@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>BooksBuzza</title>
+  </head>
+  <body class="bg-light">
+    <%= render "layouts/navbar"%>
+    <% if !flash[:notice].blank? %>
+      <div class="notice text-center">
+        <br>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

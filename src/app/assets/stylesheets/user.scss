@@ -1,0 +1,111 @@
+$main-background-color: #f8f9fa;
+$second-main-color: #67c2e8;
+
+// how to register/login pages
+.auth-options {
+    color: #222;
+
+    li {
+        background-color: $main-background-color;
+    }
+
+    li:nth-child(1),
+    li:nth-child(2) {
+        a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: #222;
+        }
+    }
+}
+
+li:last-child span a {
+    text-decoration: none;
+    // color: $main-font-color;
+}
+
+.fa-facebook-square {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #1877F2;
+}
+
+
+// registration/signup/edit user/signin
+#error_explanation {
+    color: tomato;
+}
+
+.logo-img {
+    margin: 15px;
+}
+
+//edit user page 
+.row {
+    display: flex;
+}
+
+// whole edit form
+
+.edit-page {
+    .form-signin {
+        width: 40%;
+        padding: 15px;
+        margin: auto;
+
+        h2 {
+            margin: 20px 0;
+        }
+    }
+
+
+    // avatar image box
+    .avatar-img img {
+        height: 200px;
+        width: 180px;
+    }
+
+    .input-group {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+
+// update button of edit page
+#user_current_password {
+    margin: 10px 0 20px 0;
+}
+
+
+//login page
+.login-page {
+
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+
+    }
+}
+
+.register-page {
+
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+
+    }
+
+}
+
+.picture-upload {
+    margin: 10px 0 0 0;
+}

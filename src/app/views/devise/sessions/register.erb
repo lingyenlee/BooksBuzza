@@ -1,0 +1,22 @@
+<div class="container auth-options">
+  <div class="mt-5 px-5 col-md-6 offset-md-3">
+    <h2 class="display-6">How would you like to register?</h2>
+  </div>
+  <ul class="list-group list-group-flush col-md-6 offset-md-3 px-5">
+    <li class="list-group-item px-0">
+      <%= link_to(user_facebook_omniauth_authorize_path) do %>
+        <span>Continue with Facebook</span>
+        <span class="right"><%=  fa_icon "facebook-square"%> <%=  fa_icon "chevron-right"%> </span>
+      <% end %>
+    </li>
+    <li class="list-group-item px-0">
+      <%= link_to(new_user_registration_path) do%>
+        <span>Sign up with my email</span>
+        <span class="right"><%=  fa_icon "chevron-right"%> </span>
+      <% end %>
+    </li>
+    <li class="list-group-item px-0">
+      <span>Already a member? <%= link_to "Login", users_login_path %> </span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <h6 class="border-bottom border-gray pb-2 mb-0 text-center">Listings</h6>
+  <% @listings.each do |listing| %>
+    <div class="my-3 p-3 bg-white rounded shadow-sm booklists">
+      <div class="text-muted pt-3">
+        <div class="book-img mx-5 " >
+          <%= image_tag listing.picture_attachment_path, class: "img-thumbnail"  %>
+        </div>
+      </div>
+      <div class="pt-3">
+        <strong class="d-block text-gray-dark"> <%= listing.title%></strong>
+        by <%= listing.author %> - <%= number_to_currency(listing.price)%> <br/>
+        <%= fa_icon  "book"%>  <%= listing.categories.map(&:name).sort.join(", ")%><br/>
+        Condition: <%= listing.condition.state %><br/>
+        <%= listing.note %><br/>
+        <% if current_user.id == listing.user_id %>
+          <span><i>posted on </i><%=listing.created_at.strftime("%d-%m-%Y")%> by you</span><br/>
+          <span class="icons-wrapper">
+            <%= link_to edit_listing_path(listing) do %>
+              <%= fa_icon "edit" %>
+            <%end%>
+            <%= link_to listing, method: :delete, class: "card-link",
+              data: {confirm: "Are you sure you want to delete this listing?"}  do %>
+              <%= fa_icon "trash" %>
+            <%end%>
+          </span>
+        <%else%>
+          <div class="post-by-date">
+            <i>posted on </i><%=listing.created_at.strftime("%d-%m-%Y")%> by
+            <%= listing.user.username%>
+          </div>
+          <div class="contact-btn">
+            <button type="button" class="btn btn-secondary">Contact Seller</button>
+            <%= get_picture(listing.user)%>
+          </div>
+        <% end%>
+      </div>
+    </div>
+  <% end %>
+</div>

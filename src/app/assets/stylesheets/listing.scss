@@ -1,0 +1,144 @@
+$main-background-color: #f8f9fa;
+$second-main-color: #67c2e8;
+
+//=======create listing page================
+.create-listing,
+.edit-listing {
+    width: 60%;
+    margin: 10px auto;
+    padding: 40px;
+    background-color: lightgrey;
+}
+
+.back-button {
+    width: 60%;
+    margin: auto;
+
+}
+
+// checkboxes in create form
+fieldset.group {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.25em;
+    padding: .125em;
+}
+
+
+ul {
+    columns: 2;
+}
+
+ul.checkbox {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+
+    li input {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+//=============fontawesome styling===================
+
+.fa-edit {
+    font-size: 28px;
+    margin: 10px;
+    color: green;
+}
+
+.fa-trash {
+    margin: 10px;
+    font-size: 28px;
+    color: tomato;
+}
+
+.fa-search {
+    font-size: 24px;
+    ;
+}
+
+// ==========check box search form=================
+
+.card-body ul {
+    columns: 3;
+}
+
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid $second-main-color;
+    box-shadow: 0 1px 0 0 $second-main-color;
+}
+
+.active-cyan-2 input {
+    height: 40px;
+    margin: 10px;
+}
+
+.search-wrapper {
+    display: flex;
+}
+
+.search-btn input {
+    background-color: $second-main-color;
+    color: $main-background-color;
+
+    &:hover {
+        background-color: $main-background-color;
+        color: $second-main-color;
+        border: 1px solid $second-main-color;
+    }
+
+}
+
+.clear-search-btn a.btn {
+    background-color: $second-main-color;
+    color: whitesmoke;
+
+
+    &:hover {
+        background-color: $main-background-color;
+        color: $second-main-color;
+        border: 1px solid $second-main-color;
+    }
+}
+
+// ==========book list=============================
+
+.book-img img {
+    width: 220px;
+    height: 250px;
+}
+
+.booklists {
+    display: flex;
+}
+
+
+.contact-btn {
+    display: flex;
+    margin: 10px 0;
+
+    button {
+        margin: 0 10px;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+
+    }
+}
+
+.seller-info {
+    display: flex;
+
+    .postby {
+        display: flex;
+        align-self: center;
+    }
+}

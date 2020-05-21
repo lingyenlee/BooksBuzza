@@ -1,0 +1,28 @@
+<div class="text-center register-page">
+  <%= form_for(resource, as: resource_name, html: {class: 'form-signin', multipart: :true },  url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <p class="alert text-center text-danger"><%= alert %></p>
+    <h1 class="h3 mb-3 font-weight normal">Please register here</h1>
+    <%= f.label :username , class: "sr-only"%>
+    <%= f.text_field :username, autofocus: true, placeholder: "Username", class: "form-control" %>
+    <%= f.label :email,  class: "sr-only" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email",class: "form-control" %>
+    <%= f.label :password, class: "sr-only" %>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control" %>
+    <%= f.label :password_confirmation, class: "sr-only" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "New password",  class: "form-control"  %>
+    <%= f.label "Upload your image (optional)", class: "picture-upload"%>
+    <%= f.file_field :picture %>
+    <%= f.submit "Sign up", class:"actions btn btn-lg btn-primary btn-block" %>
+  <% end %>
+  <%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    <% end %>
+  <% end %>
+  <br/>
+  <span>Already a member? <%= link_to "Login", users_login_path %> </span>
+</div>
