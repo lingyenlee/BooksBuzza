@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook]
+        :omniauthable, omniauth_providers: [:facebook]
 
      # configure facebook users
      def self.create_from_provider_data(provider_data)

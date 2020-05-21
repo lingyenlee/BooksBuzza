@@ -15,7 +15,7 @@
       </div>
       <div class="col-md-5 d-flex justify-content-end align-items-center">
         <% if user_signed_in? %>
-          <span class="text-center mx-2">Hello, <%= current_user.username %></span>
+          <span class="text-center mx-2">Hello, <%= current_user.username.partition(" ").first %></span>
           <span  class="nav-bar-profile-img">
             <%= get_picture(current_user) %>
           </span>

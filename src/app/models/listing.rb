@@ -8,7 +8,7 @@ class Listing < ApplicationRecord
  #default book image if not attached
  def picture_attachment_path
   picture.attached? ? picture : "book.png"
-end
+  end
 
   
 end

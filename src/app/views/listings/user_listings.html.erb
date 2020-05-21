@@ -1,0 +1,5 @@
+<% if !@listings.exists? %>
+  <h2 class="py-5 text-center">You have not listed any books yet. </h2>
+<% else %>
+  <%= render "lists", listings: @listings%>
+<%end %>

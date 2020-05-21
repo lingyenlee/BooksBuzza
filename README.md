@@ -1,8 +1,8 @@
 # My 2 way market place template
 
-Link to the deployed app: https://powerful-river-52993.herokuapp.com/
+Link to the deployed app: https://infinite-fortress-98379.herokuapp.com/
 <br/>
-Link to github repo: https://github.com/lingyenlee/booksbuzza
+Link to github repo: https://github.com/lingyenlee/BooksBuzza
 
 ## Section 1: Requirement checklist 
 

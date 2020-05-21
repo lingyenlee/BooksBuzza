@@ -298,5 +298,6 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], 
-  scope: 'public_profile,email'
+  scope: 'public_profile,email'  
+  # secure_image_url: true
 end

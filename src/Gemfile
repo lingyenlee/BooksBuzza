@@ -82,3 +82,9 @@ gem 'figaro'
 
 # use Amazon s3
 gem "aws-sdk-s3", "~> 1.64"
+
+
+# process payment
+gem "stripe", "~> 5.22"
+
+gem "faker", "~> 2.11"
