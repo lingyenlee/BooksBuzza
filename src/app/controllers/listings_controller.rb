@@ -37,7 +37,7 @@ class ListingsController < ApplicationController
     end
 
     def update
-        save the object
+        # save the object
         if @listing.update_attributes(listing_params)
             # if save succeeds redirect to the show section
             flash[:notice] = "Listing updated successfully."

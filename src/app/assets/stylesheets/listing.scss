@@ -108,13 +108,27 @@ ul.checkbox {
 
 // ==========book list=============================
 
-.book-img img {
-    width: 220px;
-    height: 250px;
-}
+
 
 .booklists {
     display: flex;
+
+    .book-img-wrapper {
+        flex: 1;
+
+        .book-img {
+            text-align: center;
+        }
+
+        img {
+            width: 220px;
+            height: 250px;
+        }
+    }
+
+    .text-wrapper {
+        flex: 2
+    }
 }
 
 

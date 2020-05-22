@@ -2,12 +2,12 @@
   <h6 class="border-bottom border-gray pb-2 mb-0 text-center">Listings</h6>
   <% @listings.each do |listing| %>
     <div class="my-3 p-3 bg-white rounded shadow-sm booklists">
-      <div class="text-muted pt-3">
-        <div class="book-img mx-5 " >
+      <div class="pt-3 book-img-wrapper">
+        <div class="book-img" >
           <%= image_tag listing.picture_attachment_path, class: "img-thumbnail"  %>
         </div>
       </div>
-      <div class="pt-3">
+      <div class="pt-3 text-wrapper">
         <strong class="d-block text-gray-dark"> <%= listing.title%></strong>
         by <%= listing.author %> - <%= number_to_currency(listing.price)%> <br/>
         <%= fa_icon  "book"%>  <%= listing.categories.map(&:name).sort.join(", ")%><br/>
